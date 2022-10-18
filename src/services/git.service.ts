@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GitService {
 
-  apiUrl:string = "https://api.github.com/users/ed-knowah/repos"
+  apiUrl:string = "https://api.github.com/users/noah-builds/repos"
 
   constructor( private http: HttpClient) { }
   getRepos(){
