@@ -29,6 +29,6 @@ export class AppComponent {
   }
 
   toggleMobileMenu(){
-
+    console.log("Open Mobile menu yeah yeah")
   }
 }
