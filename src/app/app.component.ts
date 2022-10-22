@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'Fullstack Madman💀☠';
   projects: Array<any> = [];
   errorMessage: string = '';
+  showMobileNav: boolean= false
   constructor(private gitService: GitService) {}
 
   ngOnInit(): void {
@@ -29,6 +30,7 @@ export class AppComponent {
   }
 
   toggleMobileMenu(){
+    this.showMobileNav = !this.showMobileNav
     console.log("Open Mobile menu yeah yeah")
   }
 }
