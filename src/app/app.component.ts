@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { GitService } from 'src/services/git.service';
 
 @Component({
   selector: 'app-root',
@@ -7,30 +6,7 @@ import { GitService } from 'src/services/git.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Fullstack Madman💀☠';
-  projects: Array<any> = [];
-  errorMessage: string = '';
-  showMobileNav: boolean= false
-  constructor(private gitService: GitService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.getRepos();
-  }
-  getRepos() {
-    this.gitService.getRepos().subscribe({
-      next: (data) => {
-        this.projects = data;
-        console.log(data);
-      },
-      error: (error) => {
-        this.errorMessage = 'Error fetching projects';
-        console.log(error);
-      },
-    });
-  }
-
-  toggleMobileMenu(){
-    this.showMobileNav = !this.showMobileNav
-    console.log("Open Mobile menu yeah yeah")
-  }
+  ngOnInit(): void {}
 }
