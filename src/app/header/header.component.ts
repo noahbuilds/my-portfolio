@@ -7,11 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   showMobileNav: boolean = false;
+
+  navList:Array<any> = [
+    {name:'Home', link:'/'},
+    {name:'About', link:'/#about'},
+    {name:'Projects', link:'/#projects'},
+    {name:'Résumé', link:'/#'},
+  ]
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.navList[0].name)
+  }
 
   toggleMobileMenu() {
     this.showMobileNav = !this.showMobileNav;
   }
+
 }

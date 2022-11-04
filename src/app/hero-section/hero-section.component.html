@@ -1,18 +1,15 @@
 <div class="text-center sm:mt-12 lg:mt-12 md:mt-12 mt-5 xl:mt-12">
   <div
-    class="border-4 w-fit mr-auto ml-auto rounded-full border-yellow-400 memoji-animation"
+    class="border-4 w-52 mr-auto ml-auto rounded-full border-yellow-400 memoji-animation sm:w-fit lg:w-fit xl:w-fit md:w-fit"
   >
     <div
-      class="bg-yellow-400 absolute w-2/5 right-60 rounded-l-xl rounded-tr-xl text-sm lg:absolute lg:w-11/12 xl:absolute xl:w-11/12 sm:absolute sm:w-11/12 md:absolute md:w-11/12"
+      class="bg-yellow-400 absolute right-[12rem] w-[6rem] rounded-l-xl rounded-tr-xl text-xs lg:absolute lg:w-[10rem] xl:absolute xl:w-[10rem] sm:absolute sm:w-[10rem] md:absolute md:w-[10rem] sm:right-56 lg:right-56 xl:right-56 md:right-56 sm:text-sm lg:text-sm xl:text-sm md:text-sm"
     >
       <p class="font-bold p-1 text-black">Hello, {{ greetMsg }}</p>
     </div>
     <img src="assets/svgs/memoji.svg" alt="memoji" />
   </div>
-
-  <!-- <img class="  rounded-full border-4 border-x-amber-400 mr-auto ml-auto" src="assets/noah.jpg" alt=""> -->
-
-  <h2 class="mt-5">Noah Edet</h2>
+  <h2 class="mt-5">I"m Noah Edet</h2>
   <h1 class="font-bold mb-2">
     <span class="text-yellow-400 md:text-8xl sm:text-4xl text-3xl"
       >Fullstack</span
@@ -25,59 +22,14 @@
 
 <marquee class="mr-auto ml-auto flex" width="50%" direction="left">
   <div class="flex justify-center gap-4 mt-5 mb-5">
-    <img
-      class="h-10"
-      src="../assets/svgs/html-svgrepo-com.svg"
-      alt="html"
-      srcset=""
-    />
-    <img class="h-10" src="../assets/svgs/css-svgrepo-com.svg" alt="css" />
-    <img
-      class="h-10"
-      src="../assets/svgs/angular-svgrepo-com.svg"
-      alt="angular"
-    />
-    <img
-      class="h-10"
-      src="../assets/svgs/nodejs-logo-svgrepo-com.svg"
-      alt="node-js"
-    />
-    <img
-      class="h-10"
-      src="../assets/svgs/express-svgrepo-com.svg"
-      alt="express-js"
-    />
-    <img
-      class="h-10"
-      src="../assets/svgs/mongo-svgrepo-com.svg"
-      alt="mongo-db"
-    />
-    <img
-      class="h-10"
-      src="../assets/svgs/postgresql-svgrepo-com.svg"
-      alt="postgresql"
-    />
-    <img class="h-10" src="../assets/svgs/bootstrap-svgrepo-com.svg" alt="" />
-    <img
-      class="h-10"
-      src="../assets/svgs/tailwindcss-icon-svgrepo-com.svg"
-      alt="bootstrap"
-    />
-    <img
-      class="h-10"
-      src="../assets/svgs/material-ui-svgrepo-com.svg"
-      alt="material-ui"
-    />
-    <img
-      class="h-10"
-      src="../assets/svgs/js-official-svgrepo-com.svg"
-      alt="javascript"
-    />
-    <img
-      class="h-10"
-      src="../assets/svgs/typescript-logo-svgrepo-com.svg"
-      alt="typescript"
-    />
+    <ng-container *ngFor="let tool of toolsBox">
+      <img
+        class="h-10"
+        src="../assets/svgs/{{ tool }}-svgrepo-com.svg"
+        alt="html"
+        srcset=""
+      />
+    </ng-container>
   </div>
 </marquee>
 

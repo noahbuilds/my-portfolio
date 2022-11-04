@@ -8,7 +8,7 @@ module.exports = {
     screens: {
       
       'sm': '790px',
-      // => @media (min-width: 640px) { ... }
+      // => @media (min-width: 790px) { ... }
 
       'md': '768px',
       // => @media (min-width: 768px) { ... }
@@ -21,7 +21,7 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
-    }
+    },
   },
   
   plugins: [],
