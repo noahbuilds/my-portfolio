@@ -75,7 +75,7 @@
   <nav class="nav-animation">
     <ul class="text-center text-white p-8 font-extrabold">
       <ng-container *ngFor="let nav of navList">
-        <a href={{nav.link}}>
+        <a href={{nav.link}} (click)="toggleMobileMenu()">
           <li class="hover:text-yellow-400 mb-5 ">{{nav.name}}</li>
         </a>
       <!-- <hr class="border-yellow-400 mt-4"> -->
