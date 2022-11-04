@@ -73,12 +73,12 @@
   *ngIf="showMobileNav"
 >
   <nav class="nav-animation">
-    <ul class="space-x-10 text-center text-white p-8 font-extrabold">
+    <ul class="text-center text-white p-8 font-extrabold">
       <ng-container *ngFor="let nav of navList">
         <a href={{nav.link}}>
-          <li class="hover:text-yellow-400">{{nav.name}}</li>
+          <li class="hover:text-yellow-400 mb-5 ">{{nav.name}}</li>
         </a>
-      <hr>
+      <!-- <hr class="border-yellow-400 mt-4"> -->
       </ng-container>
     </ul>
   </nav>
