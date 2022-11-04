@@ -7,7 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroSectionComponent implements OnInit {
   greetMsg: string = '';
-  toolsBox: Array<string> = ['html','css','js-official','typescript-logo','material-ui','bootstrap','tailwindcss-icon','angular','nodejs-logo','express','mongo','postgresql']
+  toolsBox: Array<string> = [
+    'html',
+    'css',
+    'js-official',
+    'typescript-logo',
+    'material-ui',
+    'bootstrap',
+    'tailwindcss-icon',
+    'angular',
+    'nodejs-logo',
+    'express',
+    'mongo',
+    'postgresql',
+  ];
   constructor() {}
 
   ngOnInit(): void {
