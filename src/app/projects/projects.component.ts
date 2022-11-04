@@ -18,7 +18,7 @@ export class ProjectsComponent implements OnInit {
     this.gitService.getRepos().subscribe({
       next: (data) => {
         this.projects = data;
-        console.log(data);
+        // console.log(data);
       },
       error: (error) => {
         this.errorMessage = 'Error fetching projects';

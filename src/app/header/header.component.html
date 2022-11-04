@@ -1,99 +1,110 @@
 <div class="flex flex-wrap items-center">
-    <!-- <img class="w-7 mr-auto m-8 ml-16" src="assets/NE.png" alt="" /> -->
-    <div class="mr-auto m-4 border border-x-amber-400 hover:border-amber-400 rounded-full p-2">
-      <a href="">
-        <span class="text-yellow-400 text-2xl"
-          >N<span class="text-yellow-400 text-2xl">E</span>
-          <span class="">.</span></span
-        ></a
+  <!-- <img class="w-7 mr-auto m-8 ml-16" src="assets/NE.png" alt="" /> -->
+  <div
+    class="mr-auto m-4 border border-x-amber-400 hover:border-amber-400 rounded-full p-2"
+  >
+    <a href="">
+      <span class="text-yellow-400 text-2xl"
+        >N<span class="text-yellow-400 text-2xl">E</span>
+        <span class="">.</span></span
+      ></a
+    >
+  </div>
+  <!-- Toggle button -->
+  <div class="contents md:hidden lg:hidden xl:hidden 2xl:hidden m-2">
+    <button
+      class="border border-yellow-400 hover:border-yellow-400 hover:bg-yellow-400 rounded-full p-2"
+      (click)="toggleMobileMenu()"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
-      
-    </div>
-    <div class="visible md:invisible lg:invisible xl:invisible 2xl:invisible m-2">
-      <button class="border border-yellow-400 hover:border-yellow-400 hover:bg-yellow-400  rounded-full p-2" (click)="toggleMobileMenu()">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2.99902 6.10345C2.44702 6.10345 1.99902 6.55145 1.99902 7.10345C1.99902 7.65545 2.44702 8.10345 2.99902 8.10345H20.999C21.551 8.10345 21.999 7.65545 21.999 7.10345C21.999 6.55145 21.551 6.10345 20.999 6.10345H2.99902ZM2.99902 11.1035C2.44702 11.1035 1.99902 11.5515 1.99902 12.1035C1.99902 12.6555 2.44702 13.1035 2.99902 13.1035H20.999C21.551 13.1035 21.999 12.6555 21.999 12.1035C21.999 11.5515 21.551 11.1035 20.999 11.1035H2.99902ZM2.99902 16.1035C2.44702 16.1035 1.99902 16.5515 1.99902 17.1035C1.99902 17.6555 2.44702 18.1035 2.99902 18.1035H20.999C21.551 18.1035 21.999 17.6555 21.999 17.1035C21.999 16.5515 21.551 16.1035 20.999 16.1035H2.99902Z" fill="yellow"/>
-          </svg>
-          
-      </button>
-    
-  
-    </div>
-
-   
-
-    <!-- <div class=" flex"> -->
-    <nav class="invisible sm:invisible md:visible lg:visible xl:visible 2xl:visible">
-      <ul class="flex flex-wrap space-x-10  items-center">
-        <a href="/">
-          <li class="hover:text-yellow-400">Home</li>
-        </a>
-        <a href="/#about">
-          <li class="hover:text-yellow-400">About</li>
-        </a>
-        <a href="/#projects">
-          <li class="hover:text-yellow-400">Projects</li>
-        </a>
-        <a href="#">
-          <li class="hover:text-yellow-400">Résumé</li>
-        </a>
-        <!-- <button
-        class="rounded-full border w-fit border-yellow-400 hover:bg-yellow-700 p-2 "
-      > -->
-        <i
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="yellow"
-            class="w-6 h-6 light"
-          >
-            <path
-              d="M12 .75a8.25 8.25 0 00-4.135 15.39c.686.398 1.115 1.008 1.134 1.623a.75.75 0 00.577.706c.352.083.71.148 1.074.195.323.041.6-.218.6-.544v-4.661a6.714 6.714 0 01-.937-.171.75.75 0 11.374-1.453 5.261 5.261 0 002.626 0 .75.75 0 11.374 1.452 6.712 6.712 0 01-.937.172v4.66c0 .327.277.586.6.545.364-.047.722-.112 1.074-.195a.75.75 0 00.577-.706c.02-.615.448-1.225 1.134-1.623A8.25 8.25 0 0012 .75z"
-            />
-            <path
-              fill-rule="evenodd"
-              d="M9.013 19.9a.75.75 0 01.877-.597 11.319 11.319 0 004.22 0 .75.75 0 11.28 1.473 12.819 12.819 0 01-4.78 0 .75.75 0 01-.597-.876zM9.754 22.344a.75.75 0 01.824-.668 13.682 13.682 0 002.844 0 .75.75 0 11.156 1.492 15.156 15.156 0 01-3.156 0 .75.75 0 01-.668-.824z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </i>
-      <!-- </button> -->
-      </ul>
-     
-    </nav>
-
-    
-    <!-- </div> -->
-    
+        <path
+          d="M2.99902 6.10345C2.44702 6.10345 1.99902 6.55145 1.99902 7.10345C1.99902 7.65545 2.44702 8.10345 2.99902 8.10345H20.999C21.551 8.10345 21.999 7.65545 21.999 7.10345C21.999 6.55145 21.551 6.10345 20.999 6.10345H2.99902ZM2.99902 11.1035C2.44702 11.1035 1.99902 11.5515 1.99902 12.1035C1.99902 12.6555 2.44702 13.1035 2.99902 13.1035H20.999C21.551 13.1035 21.999 12.6555 21.999 12.1035C21.999 11.5515 21.551 11.1035 20.999 11.1035H2.99902ZM2.99902 16.1035C2.44702 16.1035 1.99902 16.5515 1.99902 17.1035C1.99902 17.6555 2.44702 18.1035 2.99902 18.1035H20.999C21.551 18.1035 21.999 17.6555 21.999 17.1035C21.999 16.5515 21.551 16.1035 20.999 16.1035H2.99902Z"
+          fill="yellow"
+        />
+      </svg>
+    </button>
   </div>
 
-  <!-- <hr class="border-slate-700" /> -->
-  <!-- <h1 class="text-3x1 font-bold  mt-9 text-center  text-2xl"> Welcome to my Portfolio Site</h1> -->
+  <!-- <div class=" flex"> -->
+  <nav
+    class="hidden sm:contents md:contents lg:contents xl:contents 2xl:contents"
+  >
+    <ul class="flex flex-wrap space-x-10 items-center">
+      <a href="/">
+        <li class="hover:text-yellow-400">Home</li>
+      </a>
+      <a href="/#about">
+        <li class="hover:text-yellow-400">About</li>
+      </a>
+      <a href="/#projects">
+        <li class="hover:text-yellow-400">Projects</li>
+      </a>
+      <a href="#">
+        <li class="hover:text-yellow-400">Résumé</li>
+      </a>
+      <!-- <button
+        class="rounded-full border w-fit border-yellow-400 hover:bg-yellow-700 p-2 "
+      > -->
+      <i
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="yellow"
+          class="w-6 h-6 light"
+        >
+          <path
+            d="M12 .75a8.25 8.25 0 00-4.135 15.39c.686.398 1.115 1.008 1.134 1.623a.75.75 0 00.577.706c.352.083.71.148 1.074.195.323.041.6-.218.6-.544v-4.661a6.714 6.714 0 01-.937-.171.75.75 0 11.374-1.453 5.261 5.261 0 002.626 0 .75.75 0 11.374 1.452 6.712 6.712 0 01-.937.172v4.66c0 .327.277.586.6.545.364-.047.722-.112 1.074-.195a.75.75 0 00.577-.706c.02-.615.448-1.225 1.134-1.623A8.25 8.25 0 0012 .75z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M9.013 19.9a.75.75 0 01.877-.597 11.319 11.319 0 004.22 0 .75.75 0 11.28 1.473 12.819 12.819 0 01-4.78 0 .75.75 0 01-.597-.876zM9.754 22.344a.75.75 0 01.824-.668 13.682 13.682 0 002.844 0 .75.75 0 11.156 1.492 15.156 15.156 0 01-3.156 0 .75.75 0 01-.668-.824z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </i>
+      <!-- </button> -->
+    </ul>
+  </nav>
 
-  <!-- <div class="flex justify-center">
+  <!-- </div> -->
+</div>
+
+<!-- <hr class="border-slate-700" /> -->
+<!-- <h1 class="text-3x1 font-bold  mt-9 text-center  text-2xl"> Welcome to my Portfolio Site</h1> -->
+
+<!-- <div class="flex justify-center">
   <div>
     <img class=" rounded-full border-gray-100 mt-20" alt="image" />
   </div>
 </div> -->
-  <!-- <h1 class=" text-center text-xs">WELCOME TO MY WORLD</h1> -->
-  <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<!-- <h1 class=" text-center text-xs">WELCOME TO MY WORLD</h1> -->
+<!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 </svg> -->
-<div class="mobileNav top-50  bg-yellow-400 bg-opacity-70 h-60 nav-animation " *ngIf="showMobileNav">
+<div
+  class="mobileNav top-50 bg-yellow-400 bg-opacity-70 h-60 nav-animation"
+  *ngIf="showMobileNav"
+>
   <nav class="nav-animation">
     <ul class="space-x-10 text-center text-black p-8 font-extrabold">
       <a href="/">
         <li class="hover:text-white">Home</li>
       </a>
-     
+
       <a href="/#about">
         <li class="hover:text-white">About</li>
       </a>
-      
+
       <a href="/#projects">
         <li class="hover:text-white">Projects</li>
       </a>
-      
+
       <a href="#">
         <li class="hover:text-yellow-400">Résumé</li>
       </a>
@@ -120,6 +131,5 @@
       </i>
     </button> -->
     </ul>
-   
   </nav>
 </div>
