@@ -22,7 +22,7 @@ export class ProjectsComponent implements OnInit {
       },
       error: (error) => {
         this.errorMessage = 'Error fetching projects';
-        console.log(error);
+        // console.log(error);
       },
     });
   }
