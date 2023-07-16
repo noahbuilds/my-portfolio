@@ -1,0 +1,37 @@
+
+
+.nav-animation {
+    animation: fadeInAnimation ease-in 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+/* .tools-animation{
+    position: absolute;
+    left: 0;
+    height: 100px;
+    background: #fff;
+    animation: lineH .6s .9s  linear;
+}
+
+@keyframes lineH{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+        opacity: 0;
+}
+} */
+
+
+

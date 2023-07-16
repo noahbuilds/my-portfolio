@@ -1,0 +1,88 @@
+<div>
+  <div class="text-center sm:mt-12 lg:mt-12 md:mt-12 mt-14 xl:mt-12">
+    <div
+      class="border-4 w-52 mr-auto ml-auto rounded-full border-yellow-400 memoji-animation sm:w-fit lg:w-fit xl:w-fit md:w-fit"
+    >
+      <div
+        class="bg-yellow-400 absolute right-[12rem] w-[6rem] rounded-l-xl rounded-tr-xl text-xs lg:absolute lg:w-[10rem] xl:absolute xl:w-[10rem] sm:absolute sm:w-[10rem] md:absolute md:w-[10rem] sm:right-56 lg:right-56 xl:right-56 md:right-56 sm:text-sm lg:text-sm xl:text-sm md:text-sm"
+      >
+        <p class="font-bold p-1 text-black">Hello, {{ greetMsg }}</p>
+      </div>
+      <img src="assets/svgs/memoji.svg" alt="memoji" />
+    </div>
+    <h2 class="mt-5">I'm NO🅰H</h2>
+    <h1 class="font-bold mb-2">
+      <span class="text-yellow-400 md:text-8xl sm:text-4xl text-3xl"
+        >Fullstack</span
+      >
+      Engineer<span class="text-yellow-400 text-3xl">.</span>
+    </h1>
+    <p class="text-slate-700 mb-5">
+      Passionately Crafting Web Wonders, Unleashing Digital Awesomeness!
+      <!-- I use MEAN to develop MEANingful Products😒 -->
+      <!-- JavaScript flows through my veins,  -->
+    </p>
+  </div>
+  <!-- <h1 class="mt-20 lg:text-4xl ms:text-2x1 sm:text-2x1 underline">My Tools</h1> -->
+
+  <marquee class="mr-auto ml-auto flex" width="50%" direction="left">
+    <div class="flex justify-center gap-4 mt-5 mb-5">
+      <ng-container *ngFor="let tool of toolsBox">
+        <img
+          class="h-10"
+          src="../assets/svgs/{{ tool }}-svgrepo-com.svg"
+          alt="html"
+          srcset=""
+        />
+      </ng-container>
+    </div>
+  </marquee>
+
+  <div class="flex justify-center">
+    <button
+      class="bg-blue-800 rounded-lg p-3 pr-10 pl-10 hover:bg-blue-950 ml-5 mb-16"
+      (click)="showIframe = !showIframe"
+    >
+      <!-- <a href="https://calendly.com/edetnoah/chat"> Let's make magic✨ </a> -->
+      Let's Work Wonders
+    </button>
+  </div>
+
+  <ng-container *ngIf="showIframe">
+    <div
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 15%;
+      "
+      class="bg-white"
+    >
+      <div
+        class="flex justify-end"
+        style="position: absolute; top: 0; left: 0; right: 0; bottom: 2"
+      >
+        <button
+          class="bg-red-500 rounded-sm p-3"
+          (click)="showIframe = !showIframe"
+        >
+          Close
+        </button>
+      </div>
+
+      <iframe
+        width="100%"
+        height="700"
+        style="border: 1px solid black"
+        src="https://calendly.com/edetnoah/chat"
+        frameborder="0"
+      >
+        <button>Close</button>
+      </iframe>
+    </div>
+  </ng-container>
+
+  <app-footer></app-footer>
+</div>
