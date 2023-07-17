@@ -3,7 +3,7 @@
     <div
       class="mr-auto m-4 border border-x-amber-400 hover:border-amber-400 rounded-full p-2"
     >
-      <a href="">
+      <a routerLink="">
         <span class="text-yellow-400 text-2xl"
           >N<span class="text-yellow-400 text-2xl">E</span>
           <span class="">.</span></span
@@ -37,7 +37,19 @@
     >
       <ul class="flex flex-wrap space-x-10 items-center">
         <ng-container *ngFor="let nav of navList">
-          <a href="{{ nav.link }}">
+          <a *ngIf="nav.name !== 'Résumé'" routerLink="{{ nav.link }}">
+            <li
+              [ngClass]="{ 'text-yellow-400': currentUrl == nav.link }"
+              class="hover:text-yellow-400"
+            >
+              {{ nav.name }}
+            </li>
+          </a>
+          <a
+            *ngIf="nav.name === 'Résumé'"
+            href="{{ nav.link }}"
+            target="_blank"
+          >
             <li
               [ngClass]="{ 'text-yellow-400': currentUrl == nav.link }"
               class="hover:text-yellow-400"
@@ -77,7 +89,7 @@
     <nav class="nav-animation">
       <ul class="text-center text-white p-8 font-extrabold">
         <ng-container *ngFor="let nav of navList">
-          <a href="{{ nav.link }}" (click)="toggleMobileMenu()">
+          <a routerLink="{{ nav.link }}" (click)="toggleMobileMenu()">
             <li class="hover:text-yellow-400 mb-5">{{ nav.name }}</li>
           </a>
           <!-- <hr class="border-yellow-400 mt-4"> -->

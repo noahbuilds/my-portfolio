@@ -8,13 +8,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   showMobileNav: boolean = false;
-  currentUrl: string = ''
+  currentUrl: string = '';
 
   navList: Array<any> = [
     { name: 'Home', link: '/' },
     { name: 'About', link: '/about' },
     // {name:'Projects', link:'/#projects'},
-    { name: 'Résumé', link: '/#' },
+    {
+      name: 'Résumé',
+      link: 'https://drive.google.com/file/d/1Me85S6AHylxQ8y46HWCpFSCfBt0279sc/view?usp=sharing',
+    },
   ];
   constructor(private router: Router) {}
 

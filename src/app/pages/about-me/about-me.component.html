@@ -52,14 +52,20 @@
       <!-- <p>Whats in my toolsBox⚙🛠</p> -->
     </div>
     <div class="flex justify-start lg:mx-24">
-      <button
-        class="border border-yellow-400 rounded-lg p-3 pr-10 pl-10 hover:bg-yellow-500 ml-5 mb-16"
+      <a
+        href="https://drive.google.com/file/d/1Me85S6AHylxQ8y46HWCpFSCfBt0279sc/view?usp=sharing"
+        target="_blank"
       >
-        <!-- <a href="https://calendly.com/edetnoah/chat"> Let's make magic✨ </a> -->
-        Resume
-      </button>
+        <button
+          class="border border-yellow-400 rounded-lg p-3 pr-10 pl-10 hover:bg-yellow-500 ml-5 mb-16"
+        >
+          Resume
+        </button>
+      </a>
+
       <button
         class="border border-yellow-400 rounded-lg p-3 pr-10 pl-10 hover:bg-yellow-500 ml-5 mb-16"
+        (click)="showIframe = !showIframe"
       >
         <!-- <a href="https://calendly.com/edetnoah/chat"> Let's make magic✨ </a> -->
         Let's Work Wonders
@@ -69,3 +75,39 @@
 
   <app-footer></app-footer>
 </div>
+
+<ng-container *ngIf="showIframe">
+  <div
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 15%;
+    "
+    class="bg-white"
+  >
+    <div
+      class="flex justify-end"
+      style="position: absolute; top: 0; left: 0; right: 0; bottom: 2"
+    >
+      <button
+        class="bg-red-500 rounded-sm p-3"
+        (click)="showIframe = !showIframe"
+      >
+        Close
+      </button>
+    </div>
+
+    <iframe
+      width="100%"
+      height="700"
+      style="border: 1px solid black"
+      src="https://calendly.com/edetnoah/chat"
+      frameborder="0"
+    >
+      <button>Close</button>
+    </iframe>
+  </div>
+</ng-container>
