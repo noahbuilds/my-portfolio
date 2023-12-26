@@ -7,20 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroSectionComponent implements OnInit {
   greetMsg: string = '';
-  showIframe: boolean = false
+  showIframe: boolean = false;
   toolsBox: Array<string> = [
     'html',
     'css',
     'js-official',
     'typescript-logo',
+    'python',
     'material-ui',
     'bootstrap',
     'tailwindcss-icon',
+    'react-javascript-js-framework-facebook',
+    'nextjs',
     'angular',
     'nodejs-logo',
+    'nestjs',
     'express',
     'mongo',
     'postgresql',
+    'docker',
+    'kubernetes',
   ];
   constructor() {}
 
