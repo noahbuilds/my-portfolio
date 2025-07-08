@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
     // {name:'Projects', link:'/#projects'},
     {
       name: 'Résumé',
-      link: 'https://drive.google.com/file/d/1806DKFYefcsxrOX-2NJegcbUnSxb-s5v/view?usp=sharing',
+      link: 'https://drive.google.com/file/d/1QI_hvpyopGpT0mGbnf0rAAivpwvEKUfG/view?usp=sharing',
     },
   ];
   constructor(private router: Router) {}
