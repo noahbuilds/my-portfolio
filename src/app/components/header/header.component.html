@@ -49,8 +49,14 @@
     <nav class="px-6 py-5">
       <ul class="space-y-4">
         <ng-container *ngFor="let nav of navList">
-          <li>
+          <li *ngIf="nav.name !== 'Résumé'">
             <a routerLink="{{ nav.link }}" (click)="toggleMobileMenu()"
+               class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">
+              {{ nav.name }}
+            </a>
+          </li>
+          <li *ngIf="nav.name === 'Résumé'">
+            <a href="{{ nav.link }}" target="_blank" (click)="toggleMobileMenu()"
                class="block text-sm font-medium text-gray-300 hover:text-yellow-400 transition-colors">
               {{ nav.name }}
             </a>
