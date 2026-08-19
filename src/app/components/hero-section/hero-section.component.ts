@@ -58,7 +58,7 @@ export class HeroSectionComponent implements OnInit {
       type: '',
       bullets: [
         'Built full-stack web applications using NestJS and PostgreSQL.',
-        'Developed and maintained large-scale JAMB/CBT examination platforms handling thousands of concurrent users.',
+        'Developed and maintained large-scale CBT examination platforms handling thousands of concurrent users.',
         'Designed RESTful APIs for examination management, candidate processing, and result computation.',
         'Collaborated with cross-functional teams to ship reliable EdTech products on tight deadlines.',
       ],
