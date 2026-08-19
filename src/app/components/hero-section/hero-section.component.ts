@@ -16,10 +16,10 @@ export class HeroSectionComponent implements OnInit {
       period: 'Present',
       type: '',
       bullets: [
-        'Build and maintain backend APIs for Aquila, a digital banking platform (myaquila.com).',
-        'Develop front-end interfaces and admin dashboards using Angular, React, and Next.js.',
-        'Collaborate with client engineering teams to deliver scalable digital banking solutions.',
-        'Participate in code reviews and contribute to technical architecture discussions.',
+        'Develop and maintain front-end interfaces and admin dashboards for Aquila, a digital banking platform.',
+        'Build responsive, scalable UIs using Angular, React, and Next.js.',
+        'Collaborate with client engineering teams to translate product requirements into polished user experiences.',
+        'Participate in code reviews and contribute to front-end architecture discussions.',
       ],
     },
     {
