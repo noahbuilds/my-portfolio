@@ -1,109 +1,81 @@
 <app-header></app-header>
-<div class="mt-10">
-  <h1
-    id="about"
-    class="font-bold lg:text-4xl md:text-3xl sm:5xl text-3xl text-center"
-  >
-    About <span class="text-yellow-400">Me.</span>
-  </h1>
-  <p class="text-slate-700 mb-5 text-center">Some stuffs about me</p>
-  <div class="container text-center ml-auto mr-auto" style="max-width: 1140px">
-    <div class="flex justify-center align-middle">
-      <p class="md:text-lg p-3 text-start sm:w-7/12 lg:w-7/12 md:w-7/12">
-        <!-- Hey there, I'm Noah, a digital architect who loves crafting captivating
-        experiences on the web. It all began in 2018 when I whispered the code
-        for 'hello world' in C, and the computer echoed my excitement. Ever
-        since, the art of commanding technology and bringing imagination to life
-        has completely captivated me -->
 
-        My name is Noah and I enjoy designing and building stuffs that live on
-        the internet. My interest in coding started back in 2018 when I wrote a
-        program that prints
-        <span class="text-yellow-400">"hello world"</span> in C — turns out
-        telling the computer what to do and then doing exactly thesame thing got
-        me really fascinated🤯. <br /><br />
+<div class="min-h-screen py-20 px-6">
+  <div class="max-w-2xl mx-auto">
 
-        Today, having worked with some awesome start-ups, ranging from different
-        industries(<span class="text-yellow-400"
-          >Edtech, FinTech, Ecommerce</span
-        >
-        ) and teams is a privilege I've enjoyed🫶🏾. <br />
-        <br />
-        These days, I spend much of my time building awesome digital products
-        and solutions that are inclusive and accessible for a range of clients.
-        <br />
-        As a software engineer, I specialize in building incredible digital
-        experiences, as well as occasionally designing them🎨.
-        <!-- I'm now focusing on building products that are accessible and put the user first.  -->
-        <br /><br />
-        Aside sitting in front of my machine👨🏾‍💻. I love playing video games 🎮,
-        drumming🥁, consuming Shawarma and Ice-cream😋
+    <p class="text-yellow-400/70 text-xs font-semibold tracking-widest uppercase mb-3">About</p>
+    <h1 class="font-bold text-4xl lg:text-5xl tracking-tight mb-10">
+      About <span class="text-yellow-400">Me.</span>
+    </h1>
+
+    <div class="space-y-5 text-gray-400 leading-relaxed text-base">
+      <p>
+        My name is Noah and I enjoy designing and building things that live on the internet.
+        My interest in coding started back in 2018 when I wrote a program that prints
+        <span class="text-yellow-400">"hello world"</span> in C — turns out telling the computer
+        what to do and then watching it actually do it got me completely hooked.
       </p>
 
-      <div class="hidden lg:contents md:visible xl:visible sm:visible">
-        <img src="assets/svgs/memoji-2.svg" alt="memoji" />
-      </div>
-      <!-- <p>Whats in my toolsBox⚙🛠</p> -->
+      <p>
+        Over the years I've had the privilege of working with some great teams across a range
+        of industries —
+        <span class="text-white font-medium">Banking, FinTech, EdTech, E-commerce, and Marketplaces</span>.
+        That variety has shaped me into a backend engineer who's equally at home building
+        financial APIs, real-time messaging systems, exam platforms at scale, or marketplace
+        services — my backend experience goes well beyond fintech.
+      </p>
+
+      <p>
+        These days I spend most of my time building reliable, well-structured backend systems
+        and APIs, while also bringing solid full-stack experience to the front-end side of things.
+        As a software engineer, I specialise in building incredible digital experiences, and
+        occasionally designing them too.
+      </p>
+
+      <p>
+        Aside from sitting in front of my machine, I love playing video games, drumming, and
+        consuming shawarma and ice-cream in unhealthy quantities.
+      </p>
     </div>
-    <div class="flex justify-start lg:mx-24">
+
+    <div class="flex gap-4 mt-12">
       <a
-        href="https://drive.google.com/file/d/1MO9i-5uGPjc6OLbk7sYC8loIzdQqJ_mj/view?usp=sharing"
+        href="https://drive.google.com/file/d/1meRpemHSgLGWALHQZXW_UTQCMsH9D5z4/view?usp=sharing"
         target="_blank"
       >
-        <button
-          class="border border-yellow-400 rounded-lg p-3 pr-10 pl-10 hover:bg-yellow-500 ml-5 mb-16"
-        >
-          Resume
+        <button class="border border-yellow-400/50 text-yellow-400 font-medium rounded-xl px-8 py-3 hover:bg-yellow-400/10 hover:border-yellow-400 transition-all duration-200 text-sm">
+          Résumé
         </button>
       </a>
-
       <button
-        class="border border-yellow-400 rounded-lg p-3 pr-10 pl-10 hover:bg-yellow-500 ml-5 mb-16"
+        class="border border-white/15 text-gray-300 font-medium rounded-xl px-8 py-3 hover:border-white/30 hover:text-white transition-all duration-200 text-sm"
         (click)="showIframe = !showIframe"
       >
-        <!-- <a href="https://calendly.com/edetnoah/chat"> Let's make magic✨ </a> -->
         Let's Work Wonders
       </button>
     </div>
   </div>
-
-
-
-  <app-footer></app-footer>
 </div>
+
+<app-footer></app-footer>
 
 <ng-container *ngIf="showIframe">
   <div
-    style="
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0 15%;
-    "
+    style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; margin: 0 15%; z-index: 100;"
     class="bg-white"
   >
-    <div
-      class="flex justify-end"
-      style="position: absolute; top: 0; left: 0; right: 0; bottom: 2"
-    >
-      <button
-        class="bg-red-500 rounded-sm p-3"
-        (click)="showIframe = !showIframe"
-      >
+    <div class="flex justify-end p-2">
+      <button class="bg-red-500 text-white text-sm font-medium rounded px-4 py-2" (click)="showIframe = !showIframe">
         Close
       </button>
     </div>
-
     <iframe
       width="100%"
       height="700"
-      style="border: 1px solid black"
+      title="Schedule a meeting"
+      style="border: none;"
       src="https://calendly.com/edetnoah/chat"
-      frameborder="0"
     >
-      <button>Close</button>
     </iframe>
   </div>
 </ng-container>

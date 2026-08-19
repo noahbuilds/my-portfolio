@@ -1,13 +1,49 @@
-.memoji-animation{
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+.memoji-animation {
+  animation: floating 3s ease-in-out infinite;
 }
- 
-@keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }   
 
+@keyframes floating {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(14px); }
+  100% { transform: translateY(0); }
+}
+
+.exp-card {
+  background: rgba(255, 255, 255, 0.028);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-left: 2px solid rgba(250, 204, 21, 0.55);
+  transition: all 0.25s ease;
+}
+
+.exp-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+  border-left-color: rgba(250, 204, 21, 0.95);
+  transform: translateX(3px);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #facc15 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pill-tag {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.25);
+  color: rgba(250, 204, 21, 0.8);
+}
+
+.section-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(250, 204, 21, 0.7);
 }

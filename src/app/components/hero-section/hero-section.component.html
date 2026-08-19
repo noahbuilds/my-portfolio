@@ -1,85 +1,114 @@
 <div>
-  <div class="text-center sm:mt-12 lg:mt-12 md:mt-12 mt-14 xl:mt-12">
+  <!-- HERO -->
+  <div class="text-center pt-20 pb-4 px-6">
     <div
-      class="border-4 w-52 mr-auto ml-auto rounded-full border-yellow-400 memoji-animation sm:w-fit lg:w-fit xl:w-fit md:w-fit"
+      class="border-4 w-52 mr-auto ml-auto rounded-full border-yellow-400/60 memoji-animation sm:w-fit lg:w-fit xl:w-fit md:w-fit"
+      style="box-shadow: 0 0 40px rgba(250,204,21,0.12);"
     >
       <div
         class="bg-yellow-400 absolute right-[12rem] w-[6rem] rounded-l-xl rounded-tr-xl text-xs lg:absolute lg:w-[10rem] xl:absolute xl:w-[10rem] sm:absolute sm:w-[10rem] md:absolute md:w-[10rem] sm:right-56 lg:right-56 xl:right-56 md:right-56 sm:text-sm lg:text-sm xl:text-sm md:text-sm"
       >
-        <p class="font-bold p-1 text-black">Hello, {{ greetMsg }}</p>
+        <p class="font-semibold p-1 text-black text-xs">Hello, {{ greetMsg }}</p>
       </div>
       <img src="assets/svgs/memoji.svg" alt="memoji" />
     </div>
-    <h2 class="mt-5">I'm NO🅰H</h2>
-    <h1 class="font-bold mb-2">
-      <span class="text-yellow-400 md:text-8xl sm:text-4xl text-3xl"
-        >Fullstack</span
-      >
-      Developer<span class="text-yellow-400 text-3xl">.</span>
-    </h1>
-    <p class="text-slate-700 mb-5">
-      Passionately Crafting Web Wonders, Unleashing Digital Awesomeness!
 
+    <p class="mt-6 text-gray-500 text-sm tracking-widest font-medium uppercase">I'm NO🅰H</p>
+    <h1 class="font-bold mt-2 mb-3 leading-tight tracking-tight">
+      <span class="gradient-text md:text-8xl sm:text-5xl text-4xl">Fullstack</span>
+      <span class="md:text-8xl sm:text-5xl text-4xl"> Developer</span><span class="text-yellow-400 text-3xl">.</span>
+    </h1>
+    <p class="text-gray-500 mb-10 text-sm tracking-wide max-w-sm mx-auto">
+      Passionately crafting web products across banking, marketplaces, EdTech &amp; beyond.
     </p>
   </div>
-  <!-- <h1 class="mt-20 lg:text-4xl ms:text-2x1 sm:text-2x1 underline">My Tools</h1> -->
 
-  <marquee class="mr-auto ml-auto flex" width="50%" direction="left">
-    <div class="flex justify-center gap-4 mt-5 mb-5">
+  <!-- TOOLS MARQUEE -->
+  <marquee class="mr-auto ml-auto flex" width="60%" direction="left">
+    <div class="flex items-center gap-5 py-3">
       <ng-container *ngFor="let tool of toolsBox">
         <img
-          class="h-10"
+          class="h-7 opacity-60 hover:opacity-100 transition-opacity"
           src="../assets/svgs/{{ tool }}-svgrepo-com.svg"
-          alt="html"
-          srcset=""
+          alt="{{ tool }}"
         />
       </ng-container>
     </div>
   </marquee>
 
-  <div class="flex justify-center">
+  <!-- CTA -->
+  <div class="flex justify-center mt-10 mb-20">
     <button
-      class="bg-blue-800 rounded-lg p-3 pr-10 pl-10 hover:bg-blue-950 ml-5 mb-16"
+      class="border border-yellow-400/50 text-yellow-400 font-medium rounded-xl px-10 py-3 hover:bg-yellow-400/10 hover:border-yellow-400 transition-all duration-200 text-sm"
       (click)="showIframe = !showIframe"
     >
-      <!-- <a href="https://calendly.com/edetnoah/chat"> Let's make magic✨ </a> -->
       Let's Work Wonders
     </button>
   </div>
+
+  <!-- DIVIDER -->
+  <div class="max-w-4xl mx-auto px-6 mb-16">
+    <div class="flex items-center gap-4">
+      <div class="flex-1 h-px bg-white/[0.06]"></div>
+      <span class="section-eyebrow">Experience</span>
+      <div class="flex-1 h-px bg-white/[0.06]"></div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE SECTION -->
+  <div class="px-6 pb-4 max-w-4xl mx-auto">
+    <h2 class="font-bold text-3xl lg:text-4xl tracking-tight mb-1">
+      Work <span class="text-yellow-400">Experience.</span>
+    </h2>
+    <p class="text-gray-500 text-sm mb-8">Where I've worked</p>
+  </div>
+
+  <div class="px-6 pb-16 max-w-4xl mx-auto space-y-4">
+    <div
+      *ngFor="let exp of experiences"
+      class="exp-card rounded-2xl p-6"
+    >
+      <div class="flex justify-between items-start flex-wrap gap-2 mb-4">
+        <div>
+          <h3 class="font-semibold text-white text-base leading-snug">{{ exp.role }}</h3>
+          <p class="text-yellow-400 text-sm font-medium mt-0.5">{{ exp.company }}</p>
+          <span
+            *ngIf="exp.type"
+            class="pill-tag inline-block mt-2"
+          >{{ exp.type }}</span>
+        </div>
+        <span class="text-gray-500 text-xs whitespace-nowrap font-medium mt-1">{{ exp.period }}</span>
+      </div>
+      <ul class="space-y-2">
+        <li *ngFor="let bullet of exp.bullets" class="text-gray-400 text-sm flex gap-2.5 leading-relaxed">
+          <span class="text-yellow-400/70 shrink-0 mt-1 text-xs">▸</span>
+          <span>{{ bullet }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
   <app-projects></app-projects>
 
+  <!-- CALENDLY MODAL -->
   <ng-container *ngIf="showIframe">
     <div
-      style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: 0 15%;
-      "
+      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 0 15%;"
       class="bg-white"
     >
-      <div
-        class="flex justify-end"
-        style="position: absolute; top: 0; left: 0; right: 0; bottom: 2"
-      >
-        <button
-          class="bg-red-500 rounded-sm p-3"
-          (click)="showIframe = !showIframe"
-        >
+      <div class="flex justify-end" style="position: absolute; top: 0; left: 0; right: 0;">
+        <button class="bg-red-500 rounded-sm p-3 text-sm font-medium" (click)="showIframe = !showIframe">
           Close
         </button>
       </div>
-
       <iframe
         width="100%"
         height="700"
-        style="border: 1px solid black"
+        title="Schedule a meeting"
+        style="border: 1px solid rgba(0,0,0,0.1);"
         src="https://calendly.com/edetnoah/chat"
-        frameborder="0"
       >
-        <button>Close</button>
       </iframe>
     </div>
   </ng-container>
